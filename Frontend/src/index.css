@@ -1,0 +1,118 @@
+/* Use local font files from src/assets to avoid external requests and CSP issues */
+@font-face {
+  font-family: 'Playfair Display Local';
+  src: url('./assets/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display Local';
+  src: url('./assets/PlayfairDisplay-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display Local';
+  src: url('./assets/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora Local';
+  src: url('./assets/Lora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lora Local';
+  src: url('./assets/Lora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@import 'tailwindcss';
+
+:root {
+  --color-primary-teal: #008080;
+  --color-accent-gold: #FFD700;
+  --color-neutral-ivory: #FFFFF0;
+  --color-neutral-light-gray: #F5F5F5;
+  --font-family-playfair: 'Playfair Display Local', serif;
+  --font-family-lora: 'Lora Local', serif;
+  --radius-soft: 12px;
+  --shadow-subtle: 0 2px 8px rgba(0, 128, 128, 0.1);
+}
+
+body {
+  font-family: var(--font-family-lora);
+  background-color: var(--color-neutral-ivory);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-playfair);
+}
+
+.btn-primary {
+  background-color: var(--color-primary-teal);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-soft);
+  font-weight: 500;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: rgba(0, 128, 128, 0.9);
+}
+
+.btn-primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-subtle);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Footer tweaks */
+.footer {
+  background: white;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius-soft);
+  transition: all 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--color-primary-teal);
+}
+
+.checkbox-custom {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-primary-teal);
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}
+
+.checkbox-custom:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary-teal);
+}
