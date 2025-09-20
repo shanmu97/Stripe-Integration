@@ -97,6 +97,12 @@ Notes:
 - If you change `Frontend/.env`, restart the Vite server so `import.meta.env` picks up updates.
 - For local development you can use test Stripe keys (pk_test_/sk_test_...). Ensure publishable and secret keys are from the same Stripe account.
 
+Local URL replacement note:
+- If your frontend or backend code still contains deployed links (for example links pointing to a Render/Vercel URL), replace them while testing locally:
+	- In the frontend, replace deployed backend links with: `http://localhost:5000` (or set `VITE_API_URL` / `VITE_BACKEND_URL` to this value in `Frontend/.env`).
+	- In the backend (or deployed backend configuration), make sure `FRONTEND_URL` used to build Stripe `success_url`/`cancel_url` points to your local frontend when testing locally: `http://localhost:5173` (this is set in `Backend/.env`).
+	- After changing env files or code, restart both servers so changes take effect.
+
 ---
 
 ## Test the Stripe checkout flow (local)

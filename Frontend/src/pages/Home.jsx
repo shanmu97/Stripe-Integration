@@ -29,7 +29,7 @@ const Home = () => {
 
     try {
       // Create checkout session
-      const response = await axios.post('http://localhost:5000/api/create-checkout-session', {
+      const response = await axios.post('https://stripe-integration-7p2f.onrender.com/api/create-checkout-session', {
         email: email
       });
       console.log(response.data);
