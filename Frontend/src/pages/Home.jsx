@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(import.meta.env.STRIPE_PUBLISHABLE_KEY);
 
 const Home = () => {
   const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     // Log publishable key when Home mounts to ensure the client has the right key
-    console.log('Home mounted - VITE_STRIPE_PUBLISHABLE_KEY:', import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+    console.log('Home mounted - STRIPE_PUBLISHABLE_KEY:', import.meta.env.STRIPE_PUBLISHABLE_KEY);
   }, []);
 
   const handleSubmit = async (e) => {
@@ -29,7 +29,7 @@ const Home = () => {
 
     try {
       // Create checkout session
-      const response = await axios.post('https://stripe-integration-7p2f.onrender.com/api/create-checkout-session', {
+      const response = await axios.post('http://localhost:5000/api/create-checkout-session', {
         email: email
       });
       console.log(response.data);

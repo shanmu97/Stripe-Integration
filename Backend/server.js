@@ -58,8 +58,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: `${process.env.FRONTEND_URL || 'http://localhost:5173'}/thank-you?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.FRONTEND_URL || 'http://localhost:5173'}/`,
+      success_url: "https://stripe-integration-rho.vercel.app/thank-you?session_id={CHECKOUT_SESSION_ID}",
+      cancel_url: "https://stripe-integration-rho.vercel.app/",
       customer_email: email,
       metadata: {
         email: email,

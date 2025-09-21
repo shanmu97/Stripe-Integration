@@ -20,7 +20,7 @@ const ThankYou = () => {
     // Process the successful payment
     const processPayment = async () => {
       try {
-        await axios.post('https://stripe-integration-7p2f.onrender.com/api/payment-success', {
+        await axios.post('https://localhost:5000/api/payment-success', {
           sessionId: sessionId
         });
         setLoading(false);
