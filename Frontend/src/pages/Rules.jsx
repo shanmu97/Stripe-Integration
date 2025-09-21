@@ -13,7 +13,6 @@ const Rules = () => {
       </div>
 
       <div className="space-y-8">
-        {/* Contest Overview */}
         <div className="card">
           <h2 className="text-xl sm:text-2xl font-playfair font-semibold text-primary-teal mb-3 sm:mb-4">
             Contest Overview
@@ -33,7 +32,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Eligibility */}
         <div className="card">
           <h2 className="text-xl sm:text-2xl font-playfair font-semibold text-primary-teal mb-3 sm:mb-4">
             Eligibility Requirements
@@ -62,7 +60,6 @@ const Rules = () => {
           </ul>
         </div>
 
-        {/* Contest Rules */}
         <div className="card">
           <h2 className="text-xl sm:text-2xl font-playfair font-semibold text-primary-teal mb-3 sm:mb-4">
             Contest Rules
@@ -120,7 +117,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Judging Criteria */}
         <div className="card">
           <h2 className="text-xl sm:text-2xl font-playfair font-semibold text-primary-teal mb-3 sm:mb-4">
             Judging Criteria
@@ -160,7 +156,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Contest Process */}
         <div className="card">
           <h2 className="text-xl sm:text-2xl font-playfair font-semibold text-primary-teal mb-3 sm:mb-4">
             Contest Process
@@ -205,7 +200,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Prizes */}
         <div className="card">
           <h2 className="text-xl sm:text-2xl font-playfair font-semibold text-primary-teal mb-3 sm:mb-4">
             Prizes & Distribution
@@ -238,7 +232,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Important Disclaimers */}
         <div className="card border-l-4 border-accent-gold">
           <h2 className="text-xl sm:text-2xl font-playfair font-semibold text-primary-teal mb-3 sm:mb-4">
             Important Disclaimers
@@ -278,7 +271,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Contact Information */}
         <div className="card bg-gray-50">
           <h2 className="text-2xl font-playfair font-semibold text-primary-teal mb-4">
             Questions or Concerns?
@@ -295,7 +287,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Important Notice */}
         <div className="card border-l-4 border-red-500 bg-red-50">
           <h2 className="text-2xl font-playfair font-semibold text-red-700 mb-4">
             ⚠️ Important Notice
@@ -314,7 +305,6 @@ const Rules = () => {
           </div>
         </div>
 
-        {/* Action Buttons */}
         
       </div>
     </div>

@@ -11,9 +11,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    // Log publishable key when Home mounts to ensure the client has the right key
-  }, []);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,18 +25,12 @@ const Home = () => {
     setError('');
 
     try {
-      // Create checkout session
       const response = await axios.post('https://stripe-integration-7p2f.onrender.com/api/create-checkout-session', {
         email: email
       });
-      console.log(response.data);
 
       const { sessionId } = response.data;
 
-  // extra check: log sessionId before redirect
-  console.log('Received sessionId:', sessionId);
-
-      // Redirect to Stripe Checkout
       const stripe = await stripePromise;
       const { error } = await stripe.redirectToCheckout({
         sessionId: sessionId,

@@ -86,7 +86,6 @@ app.post('/api/payment-success', async (req, res) => {
     console.log('Stripe session retrieved:', session.id, 'payment_status:', session.payment_status);
 
     if (session.payment_status === 'paid') {
-      // Try metadata.email first, fall back to customer_email
       const email = (session.metadata && session.metadata.email) || session.customer_email;
       console.log('Resolved email from session:', email);
 

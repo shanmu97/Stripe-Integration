@@ -54,8 +54,6 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-
-        {/* Mobile menu */}
         {open && (
           <div className="sm:hidden pb-4">
             <div className="flex flex-col space-y-2">
